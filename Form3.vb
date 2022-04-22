@@ -1,35 +1,48 @@
 ﻿Public Class Form3
 
-    Private Sub Form3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+        If TextBox1.Text = "" Then
+            MsgBox("من فضلك ادخل الاسم")
+            Exit Sub
+        End If
+        Dim f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13 As String
+
+        f1 = "'" & TextBox1.Text & "',"
+        f2 = "'" & TextBox2.Text & "',"
+        f3 = "'" & TextBox3.Text & "',"
+        f4 = "'" & TextBox4.Text & "',"
+        f5 = "'" & TextBox5.Text & "',"
+        f6 = "'" & TextBox6.Text & "',"
+        f7 = "'" & TextBox7.Text & "',"
+        f8 = "'" & TextBox8.Text & "',"
+        f9 = "'" & TextBox9.Text & "',"
+        f10 = "'" & TextBox10.Text & "',"
+        f11 = "'" & TextBox11.Text & "',"
+        f12 = "'" & TextBox12.Text & "',"
+        If CheckBox1.Checked = True Then f13 = "1" Else f13 = "0"
+
+        Dim s As String
 
 
-        Cmd.CommandType = CommandType.StoredProcedure
-        Cmd.CommandText = "GetBalance"
-        Cmd.Parameters.Clear()
-        Cmd.Parameters.AddWithValue("@AccNo", Form1.TextBox1.Text)
-        Dim returnValue As SqlClient.SqlParameter
-        returnValue = Cmd.Parameters.Add("@RETURN_VALUE", SqlDbType.Int)
-        returnValue.Direction = ParameterDirection.ReturnValue
-        Cmd.Connection = Cn
-        Cmd.ExecuteNonQuery()
-        Dr = Cmd.ExecuteReader
-        Dr.Read()
+        s = "Insert Into Customers(FristName,LastName,Company,JobTitle,BusinessPhone,HomePhone,Email,City,Street,AccountNo,PinCode,MobilePhone,Status) Values (" & f1 & f2 & f3 & f4 & f5 & f6 & f7 & f8 & f9 & f10 & f11 & f12 & f13 & ")"
 
-        TextBox1.Text = returnValue.Value
 
-        Dr.Close()
-
-        'Cmd.CommandText = "select dbo.GetBalance('" & Form1.TextBox1.Text & "') "
-        'Dr = Cmd.ExecuteReader
-        'Dr.Read()
-        'TextBox1.Text = Dr(0)
-        'Dr.Close()
+        Dim h As Integer
+        Cmd.CommandType = CommandType.Text
+        Cmd.CommandText = s
+        h = Cmd.ExecuteNonQuery()
+        MsgBox(h & "تم حفظ بيانات العميل بنجاح", MsgBoxStyle.Information, "عميل جديد")
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
 
-        Me.Dispose()
+        WindowState = FormWindowState.Minimized
+
+    End Sub
+
+    Private Sub Form3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
