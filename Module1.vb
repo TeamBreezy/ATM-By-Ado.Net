@@ -1,4 +1,6 @@
-﻿Imports System.Data.SqlClient
+﻿
+Imports System.Data.SqlClient
+
 Module Module1
 
     Public Cn As New SqlConnection
@@ -8,8 +10,20 @@ Module Module1
     Public ad As New SqlDataAdapter
     Public Ds As New DataSet
 
-    Public Con As String = "Data Source=AHMED-PC;Initial Catalog=ATM;Persist Security Info=True;User ID=sa;Password=123"
+    Public Con As String = "Data Source=(LOCAL);Initial Catalog=ATM;Integrated Security=True"
 
-    Public EmpUser As String
+    Public Function GetNewID(ByVal TableName As String) As Integer
+
+        Dim s As String
+
+        s = ("Select Ident_current ('" & TableName & "') +1 AS [ID]")
+        Cmd.CommandType = CommandType.Text
+        Cmd.CommandText = s
+        Dr = Cmd.ExecuteReader
+        Dr.Read()
+        GetNewID = Dr(0).ToString
+        Dr.Close()
+
+    End Function
 
 End Module

@@ -33,44 +33,44 @@ Partial Class Form1
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(129, 98)
+        Me.TextBox2.Location = New System.Drawing.Point(141, 124)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(197, 22)
-        Me.TextBox2.TabIndex = 17
+        Me.TextBox2.Size = New System.Drawing.Size(223, 22)
+        Me.TextBox2.TabIndex = 11
         '
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(129, 61)
+        Me.TextBox1.Location = New System.Drawing.Point(141, 67)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(197, 22)
-        Me.TextBox1.TabIndex = 16
+        Me.TextBox1.Size = New System.Drawing.Size(223, 22)
+        Me.TextBox1.TabIndex = 10
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(61, 101)
+        Me.Label2.Location = New System.Drawing.Point(63, 127)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 16)
+        Me.Label2.Size = New System.Drawing.Size(58, 16)
         Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Password :"
+        Me.Label2.Text = "Password:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(57, 64)
+        Me.Label1.Location = New System.Drawing.Point(63, 70)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 16)
+        Me.Label1.Size = New System.Drawing.Size(62, 16)
         Me.Label1.TabIndex = 14
-        Me.Label1.Text = "UserName :"
+        Me.Label1.Text = "UserName:"
         '
         'Button2
         '
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.Location = New System.Drawing.Point(210, 147)
+        Me.Button2.Location = New System.Drawing.Point(222, 173)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 13
@@ -80,7 +80,7 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Location = New System.Drawing.Point(129, 147)
+        Me.Button1.Location = New System.Drawing.Point(141, 173)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 12
@@ -91,7 +91,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(398, 194)
+        Me.ClientSize = New System.Drawing.Size(427, 262)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
